@@ -32,7 +32,10 @@ export class UserService {
   }
 
   
-
+  // async findAll() {
+  //   const find = this.userRepository.find();
+  //   return find
+  // }
 
   findAll() {
     return this.userRepository.find({
