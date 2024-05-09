@@ -28,7 +28,8 @@ export class UserService {
     const accessToken = this.jwtService.sign({ userId: user.id });
 
     // Return user and accessToken
-    return  {user, accessToken} ;
+    return  {user, accessToken}
+     ;
   }
 
   
@@ -45,6 +46,10 @@ export class UserService {
 
   findOne(username: string) {
     return this.userRepository.findOneBy({username:username});
+  }
+
+  findById(id:number){
+    return this.userRepository.findOneBy({id:id});
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
