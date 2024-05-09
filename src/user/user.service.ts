@@ -28,7 +28,7 @@ export class UserService {
     const accessToken = this.jwtService.sign({ userId: user.id });
 
     // Return user and accessToken
-    return { user, accessToken };
+    return  {user, accessToken} ;
   }
 
   
